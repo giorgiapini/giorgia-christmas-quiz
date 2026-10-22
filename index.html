@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f1f3f5">
+    <meta name="description" content="Un piccolo quiz natalizio per trovare i regali perfetti per Giorgia.">
+    <title>Christmas Quiz 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="snowfall" id="snowfall" aria-hidden="true"></div>
+    <main class="app-shell">
+      <header class="site-header" aria-label="Christmas Quiz 2026">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>CHRISTMAS QUIZ <span class="brand-year">2026</span></span>
+      </header>
+
+      <section class="panel welcome-panel" id="welcome" aria-labelledby="welcome-title">
+        <p class="eyebrow">UNA PICCOLA MISSIONE NATALIZIA</p>
+        <div class="hero-decoration" aria-hidden="true">
+          <span class="decoration-star">✦</span>
+          <span class="decoration-snowflake">❄</span>
+          <span class="decoration-gift">▧</span>
+        </div>
+        <h1 id="welcome-title">Vuoi rendere felice Giorgia questo Natale?</h1>
+        <p class="welcome-copy">Bastano cinque risposte. La tua reputazione è nelle tue mani.</p>
+        <p class="choice-message" id="choice-message" aria-live="polite"></p>
+        <div class="welcome-actions" id="welcome-actions">
+          <button class="button button-primary" id="yes-button" type="button">SÌ ❤️</button>
+          <button class="button button-secondary" id="no-button" type="button" aria-label="No (non è una risposta disponibile)">NO</button>
+        </div>
+      </section>
+
+      <section class="panel quiz-panel" id="quiz" aria-labelledby="question-title" hidden>
+        <div class="quiz-topline">
+          <p class="eyebrow">QUESTIONARIO NATALIZIO</p>
+          <p class="question-count" id="question-count">Domanda 1 di 5</p>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Avanzamento del quiz" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1" id="progress-track">
+          <span class="progress-fill" id="progress-fill"></span>
+        </div>
+        <div class="question-content" id="question-content" aria-live="polite">
+          <h1 id="question-title"></h1>
+          <div class="answer-list" id="answer-list"></div>
+        </div>
+        <p class="quiz-footnote">Scegli con il cuore. O almeno con un minimo di buon senso.</p>
+      </section>
+
+      <section class="panel loading-panel" id="loading" aria-live="polite" aria-atomic="true" hidden>
+        <div class="loading-snowflake" aria-hidden="true">❄</div>
+        <p class="eyebrow">BABBO NATALE È AL LAVORO</p>
+        <h1 id="loading-message">Analisi delle risposte in corso…</h1>
+        <div class="loading-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      </section>
+
+      <section class="panel results-panel" id="results" aria-labelledby="results-title" hidden>
+        <p class="eyebrow">WISHLIST UFFICIALE DI GIORGIA</p>
+        <div class="result-sparkle" aria-hidden="true">✦</div>
+        <h1 id="results-title">Missione compiuta!</h1>
+        <p class="results-intro">Babbo Natale ha analizzato le tue risposte. Ecco i suoi suggerimenti per Giorgia! 🎁</p>
+        <div class="gift-grid" id="gift-grid"></div>
+        <p class="empty-results" id="empty-results" hidden></p>
+        <p class="results-footer">Qualunque cosa tu scelga, il pensiero sarà la parte più bella. ❤️</p>
+      </section>
+
+      <section class="panel love-panel" id="love-result" aria-labelledby="love-title" hidden>
+        <span class="love-snowflake" aria-hidden="true">❄</span>
+        <span class="love-heart" aria-hidden="true">♥</span>
+        <p class="eyebrow">IL SEGRETO MEGLIO CUSTODITO</p>
+        <h1 id="love-title">Il mio regalo sei tu ❤️</h1>
+        <span class="love-star" aria-hidden="true">✦</span>
+      </section>
+
+      <section class="panel heart-result" id="heart-result" aria-labelledby="heart-title" hidden>
+        <span class="heart-decoration" aria-hidden="true">♡</span>
+        <h1 id="heart-title">Il tuo posto nel mio cuore è già assicurato❤️</h1>
+      </section>
+
+      <footer class="site-footer">FATTO CON UN PIZZICO DI MAGIA E MOLTA ARGENTERIA</footer>
+    </main>
+
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message">
+        <span class="modal-decoration" id="modal-decoration" aria-hidden="true">✦</span>
+        <h2 id="modal-title">Una piccola osservazione</h2>
+        <p id="modal-message"></p>
+        <button class="button button-primary modal-button" id="modal-button" type="button">Va bene, scusa 😭</button>
+      </section>
+    </div>
+  </body>
+</html>
